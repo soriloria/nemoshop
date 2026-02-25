@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+{% load static %}
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    </head>
+
+    <body>
+        <div class="header">
+
+
+
+            <div class="left">
+
+
+                    <a href="{% url 'home' %}" class="logo">nemoshop</a>
+
+
+                    <div id="tooltip">
+                      <span id="tooltipText">Phone: 087-491-6703<br>Email: sorochak.igor3228@gmail.com</span>
+
+                   <a class="contacts-wrapper">
+                    Contacts
+                    <svg class="contacts-wrapper-svg" opacity="0.5" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg>
+                  </a>
+                    </div>
+                        <button class="menu-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="color: black;"><path fill-rule="evenodd" d="M5 6a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1zm0 6a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1zm1 5a1 1 0 100 2h12a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg></button>
+                                          <div id="menu" class="menu hidden">
+                                              <ul>
+                                                <div style="text-align: right;">
+
+
+
+                                                      <div>
+                                                          <span id="search-form-container"><form class="search-form" method="POST" action="{% url 'search' %}">
+                                                                {% csrf_token %}
+                                                            <input class="search-bar" id="search-input-copied" type="text" placeholder="Search for products" name="query">
+                                                            <button class="search-button">
+                                                                <img class="search-icon" src="{% static 'img/search.svg' %}">
+                                                            </button>
+                                                            </form></span>
+                                                      </div>
+
+
+
+                                                  </div>
+
+                                               <div style="text-align: right; margin-right: 15px; margin-top: 15px;">
+
+
+                                                    {% if user.is_authenticated %}
+                                                    <div class="a-login" style="display: inline-block; height: 50px; overflow: hidden;">
+                                                        <div class="a-menu"><span class="a-menu5" data-url-cabinet="{% url 'cabinet' %}">Cabinet</span><span class="a-menu2">or</span><span class="a-menu4" data-url-logout="{% url 'logout' %}">Log out</span></div>
+                                                    </div>
+                                                    {% else %}
+                                                    <div class="a-login" style="display: inline-block; height: 50px; overflow: hidden;">
+                                                        <div class="a-menu"><span class="a-menu1" data-url-login="{% url 'login' %}">Log in</span><span class="a-menu2">or</span><span class="a-menu3" data-url-register="{% url 'register' %}">Registration</span></div>
+                                                    </div>
+                                                    {% endif %}
+
+
+                                               </div>
+
+
+
+
+
+                                                <div style="text-align: right; margin-right: 55px; padding-top: 8px;">
+
+                                                    <div class="contacts-show" style="display: inline-block; height: 50px;">
+                                                        <span class="contacts-trigger">Contacts<svg class="svg-trigger" opacity="0.5" aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true">
+                                                          <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                                                        </svg></span>
+                                                    </div>
+                                                    <div class="contacts-info" style="display: none;">
+                                                      <span>Phone:<br> 087-491-6703<br>Email:<br> sorochak.igor3228<br>@gmail.com</span>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                                  <div style="text-align: right; margin-right: 70px;">
+
+
+
+                                                      <div>
+                                                         <span class="products-trigger">Products</span>
+                                                        <span id="message2">
+                                                            <span id="borderControl3" class="word-link2" data-url2="{% url 'pencils' %}">pencils</span><br>
+                                                            <span class="word-link2" data-url2="{% url 'pens' %}">pens</span><br>
+                                                            <span class="word-link2" data-url2="{% url 'notepads' %}">notepads</span><br>
+                                                            <span class="word-link2" data-url2="{% url 'copybooks' %}">copybooks</span><br>
+                                                            <span class="word-link2" data-url2="{% url 'markers' %}">markers</span><br>
+                                                            <span class="word-link2" data-url2="{% url 'pencil-cases' %}">pencil cases</span><br>
+                                                            <span class="word-link2" data-url2="{% url 'rulers' %}">rulers</span><br>
+                                                            <span id="borderControl4" class="word-link2" data-url2="{% url 'backpacks' %}">backpacks</span><br>
+                                                        </span>
+                                                      </div>
+
+
+
+                                                  </div>
+
+
+
+
+
+
+                                                  <div style="text-align: right;">
+
+
+
+                                                      <div>
+                                                          <span class="basket-url" data-url-basket="{% url 'basket' %}"><img class="basket" src="{% static 'img/basket.png' %}"></span>
+                                                          <span class="count-items">0</span>
+                                                      </div>
+
+
+
+                                                  </div>
+
+
+
+                                              </ul>
+                                          </div>
+
+            </div>
+
+
+            <div class="middle">
+                    <a class="proddesc" id="myLink">Products
+                    <span id="message">
+                          <span id="borderControl" class="word-link" data-url="{% url 'pencils' %}">pencils</span><br>
+                          <span class="word-link" data-url="{% url 'pens' %}">pens</span><br>
+                          <span class="word-link" data-url="{% url 'notepads' %}">notepads</span><br>
+                          <span class="word-link" data-url="{% url 'copybooks' %}">copybooks</span><br>
+                          <span class="word-link" data-url="{% url 'markers' %}">markers</span><br>
+                          <span class="word-link" data-url="{% url 'pencil-cases' %}">pencil cases</span><br>
+                          <span class="word-link" data-url="{% url 'rulers' %}">rulers</span><br>
+                          <span id="borderControl2" class="word-link" data-url="{% url 'backpacks' %}">backpacks</span><br>
+                    </span>
+                    </a>
+                <form class="search-form" method="POST" action="{% url 'search' %}">
+                    {% csrf_token %}
+                <input class="search-bar" id="search-input" type="text" placeholder="Search for products" name="query">
+                <button class="search-button">
+                    <img class="search-icon" src="{% static 'img/search.svg' %}">
+                </button>
+                </form>
+
+            </div>
+
+                            <div class="cart">
+                            <a class="shopping" href="{% url 'basket' %}"><img class="basket" src="{% static 'img/basket.png' %}"></a>
+                            <div class="products-count" id="products-count">0</div>
+                            </div>
+
+
+            <div class="right">
+                {% if user.is_authenticated %}
+                <div class="a-cabinet">
+                    <img src="{% static 'img/cabinet.png' %} " id="imageCabinet" class="cabinet" data-url="{% url 'cabinet' %}">
+                    </div>
+                    <a class="a-logout" href="{% url 'logout' %}">Log out</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Log in</a>
+                    <a class="or">or</a>
+                    <a href="{% url 'register' %}">Registration</a>
+                {% endif %}
+            </div>
+        </div>
+
+<script src="{% static 'js/header.js' %}"></script>
+    </body>

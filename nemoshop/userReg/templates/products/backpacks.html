@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/products.css' %}">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Backpacks</title>
+
+    </head>
+    {% include "header.html" %}
+    <body>
+
+        <div class="prodtitle-container">
+        <div class="prodtitle">Backpacks</div>
+            </div>
+
+
+            <div class="product-container">
+
+
+
+                                                     <div id="customAlert" class="custom-alert" style="display: none;">
+                                                        <p>Product added to basket</p>
+                                                        <button id="customAlertClose" style="cursor: pointer;">Close</button>
+                                                    </div>
+
+                                                     <div id="customAlert2" class="custom-alert" style="display: none;">
+                                                        <p>This Product is already there</p>
+                                                        <button id="customAlertClose2" style="cursor: pointer;">Close</button>
+                                                    </div>
+
+
+            <div class="product">
+                <div class="title">city backpack<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/backpacks/backpack1.webp' %}"></div>
+                <div class="price">Price: 15$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription(this)"><span id="description-label">Description</span><svg id="arrow-icon" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket">To the Basket</span></div>
+                </div>
+                <div id="description" class="description hidden">
+                  material - nylon<br>capacity - 24 liters<br>color - black
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="title">backpack for kids<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/backpacks/backpack4.jpg' %}"></div>
+                <div class="price">Price: 18$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription1(this)"><span id="description-label1">Description</span><svg id="arrow-icon1" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket2">To the Basket</span></div>
+                </div>
+                <div id="description1" class="description hidden">
+                  material - polyester<br>capacity - 20 liters<br>color - blue
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="title">tactical backpack<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/backpacks/backpack2.webp' %}"></div>
+                <div class="price">Price: 20$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription2(this)"><span id="description-label2">Description</span><svg id="arrow-icon2" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket3">To the Basket</span></div>
+                </div>
+                <div id="description2" class="description hidden">
+                  material - polyester<br>capacity - 30 liters<br>color - black
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="title">school backpack<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/backpacks/backpack3.webp' %}"></div>
+                <div class="price">Price: 12$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription3(this)"><span id="description-label3">Description</span><svg id="arrow-icon3" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket4">To the Basket</span></div>
+                </div>
+                <div id="description3" class="description hidden">
+                  material - nylon<br>capacity - 20 liters<br>color - black
+                </div>
+            </div>
+
+            </div>
+
+
+    {% include "footer.html" %}
+
+
+    <script src="{% static 'js/backpacks.js' %}"></script>
+    </body>
+</html>

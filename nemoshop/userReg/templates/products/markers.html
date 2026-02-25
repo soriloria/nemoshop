@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'css/products.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Markers</title>
+
+    </head>
+
+    {% include "header.html" %}
+    <body>
+
+        <div class="prodtitle-container">
+        <div class="prodtitle">Markers</div>
+            </div>
+
+
+            <div class="product-container">
+
+
+                                                    <div id="customAlert" class="custom-alert" style="display: none;">
+                                                        <p>Product added to basket</p>
+                                                        <button id="customAlertClose" style="cursor: pointer;">Close</button>
+                                                    </div>
+
+                                                     <div id="customAlert2" class="custom-alert" style="display: none;">
+                                                        <p>This Product is already there</p>
+                                                        <button id="customAlertClose2" style="cursor: pointer;">Close</button>
+                                                    </div>
+
+
+            <div class="product">
+                <div class="title">permanent marker<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/markers/marker1.webp' %}"></div>
+                <div class="price">Price: 0.35$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription(this)"><span id="description-label">Description</span><svg id="arrow-icon" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket">To the Basket</span></div>
+                </div>
+                <div id="description" class="description hidden">
+                  material - plastic<br>length - 16cm.<br>writes in black
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="title">text marker<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/markers/marker2.png' %}"></div>
+                <div class="price">Price: 0.4$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription1(this)"><span id="description-label1">Description</span><svg id="arrow-icon1" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket2">To the Basket</span></div>
+                </div>
+                <div id="description1" class="description hidden">
+                  material - plastic<br>length - 15cm.<br>writes in green
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="title">permanent markers of 7 colors<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/markers/marker3.png' %}"></div>
+                <div class="price">Price: 2.5$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription2(this)"><span id="description-label2">Description</span><svg id="arrow-icon2" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket3">To the Basket</span></div>
+                </div>
+                <div id="description2" class="description hidden">
+                  material - plastic<br>length - 16cm.<br>7 pieces in a package
+                </div>
+            </div>
+
+
+            <div class="product">
+                <div class="title">text markers of 4 colors<span>in stock</span></div>
+                <div class="image"><img src="{% static 'img/markers/marker4.jpeg' %}"></div>
+                <div class="price">Price: 2$</div>
+                <div class="bot-container">
+                <div class="half" onclick="toggleDescription3(this)"><span id="description-label3">Description</span><svg id="arrow-icon3" opacity="0.5" aria-hidden="true" height="13" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-chevron-down HeaderMenu-icon ml-1">
+                      <path d="M12.78 5.22a.749.749 0 0 1 0 1.06l-4.25 4.25a.749.749 0 0 1-1.06 0L3.22 6.28a.749.749 0 1 1 1.06-1.06L8 8.939l3.72-3.719a.749.749 0 0 1 1.06 0Z"></path>
+                    </svg></div>
+                <div class="half"><span id="addToBasket4">To the Basket</span></div>
+                </div>
+                <div id="description3" class="description hidden">
+                  material - plastic<br>length - 15cm.<br>4 pieces in a package
+                </div>
+            </div>
+
+            </div>
+
+
+    {% include "footer.html" %}
+
+
+    <script src="{% static 'js/markers.js' %}"></script>
+    </body>
+</html>

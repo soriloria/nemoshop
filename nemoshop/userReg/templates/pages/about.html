@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About</title>
+    </head>
+   {% include "header.html" %}
+
+    <body>
+
+<p class="about">This is test web-shop, u can try to buy something.<br>It works in test mode, so operations will be successful, but w/o any payment.<br>Also u can register to the system and have your cabinet, which giving you autofill rows in delivery section.<br>But you have to confirm your email before, also you can reset password.<br>You can add products to the cart and vice versa, search for products in the search bar and else.</p>
+
+
+{% include "footer.html" %}
+
+    </body>
+</html>

@@ -1,0 +1,148 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#deliverySection {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+
+h3{
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 120px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+#deliverySection h2{
+    color: rgb(255, 60, 66);
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+
+#deliverySection p{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+#deliverySection span{
+    font-size: 14px;
+}
+
+#postIndexInput{
+    margin-bottom: 30px;
+    width: 120px;
+}
+
+#postIndexInput::-webkit-inner-spin-button,
+#postIndexInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#appNumberInput{
+    width: 65px;
+}
+
+#appNumberInput::-webkit-inner-spin-button,
+#appNumberInput::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#saveButton {
+    margin-top: 17px;
+    margin-left: 200px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 7px;
+    transition: color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+}
+
+
+#saveButton:hover{
+    color: rgb(255, 60, 66);
+    background-color: rgb(80, 200, 170);
+}
+
+
+#editButton{
+    cursor: pointer;
+    border: none;
+    background-color: rgb(255, 255, 240);
+    color: rgb(255, 60, 66);
+    font-size: 16px;
+}
+
+
+#editButton:hover{
+    opacity: 0.7;
+}
+
+
+#nameInput,
+#cityInput,
+#addressInput,
+#appNumberInput,
+#postIndexInput{
+    height: 25px;
+    padding-left: 10px;
+    padding-top: 2px;
+    border-radius: 8px;
+}
+
+
+input[type='number']::-webkit-inner-spin-button,
+  input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
+
+
+@media screen and (max-width: 968px) {
+
+    h3{
+        font-size: 24px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    #deliverySection h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#saveButton {
+        margin-top: 0px;
+        margin-left: 70px;
+        margin-bottom: 60px;
+        color: black;
+        border: 1px solid black;
+    }
+
+
+    #deliverySection{
+        margin-bottom: 50px;
+    }
+
+
+}

@@ -1,0 +1,64 @@
+{% load static %}
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+
+<head>
+    <link rel="stylesheet" href="{% static 'css/registration/registration.css' %}">
+    <title>Registration</title>
+</head>
+<body>
+<div class="out">
+    <h2>Registration</h2>
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            {% if field.name == 'username' %}
+                <p class="error">This username is in use.</p>
+
+            {% elif field.name == 'email' %}
+                <p class="error">Email is already in use.</p>
+
+            {% elif field.name == 'password2' %}
+                {% if error == "The two password fields didn’t match." %}
+                    <p class="error">Passwords didn't match.</p>
+                {% elif "too short" in error %}
+                    <p class="error">Password is too short.</p>
+                {% elif "too common" in error %}
+                    <p class="error">Password is too common.</p>
+                {% endif %}
+            {% else %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+    <form method="post" action="{% url 'register' %}">
+        {% csrf_token %}
+        <div class="centralize">
+        <div>
+            <label for="id_username">Username:</label><br>
+            <input type="text" name="username" id="id_username" value="{{ form.username.value|default:'' }}" required><br>
+        </div>
+        <div>
+            <label for="id_email">Email:</label><br>
+            <input type="email" name="email" id="id_email" value="{{ form.email.value|default:'' }}" required><br>
+        </div>
+        <div>
+            <label for="id_password1">Password:</label><br>
+            <input type="password" name="password1" id="id_password1" required><br>
+        </div>
+        <div>
+            <label for="id_password2">Confirm Password:</label><br>
+            <input type="password" name="password2" id="id_password2" required><br>
+
+        </div>
+            <a class="homepage" href="{% url 'home' %}">Homepage</a>
+            <button class="register" type="submit">Sign up</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+* {
+      font-family: 'Poppins', sans-serif;
+  }
+
+  .colored {
+    background-color: rgb(80, 200, 170);
+  }
+
+.colored::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgb(200,200,200);
+  z-index: -1;
+}
+
+  h1{
+    color: rgb(255, 60, 66);
+  }
+
+  p{
+    font-size: 20px;
+  }
+

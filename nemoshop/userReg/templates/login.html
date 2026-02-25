@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Log in</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    {% include "header.html" %}
+
+<body>
+<div class="out">
+<h2>Log in</h2>
+{% if messages %}
+    {% for message in messages %}
+        <p class="error">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <div class="centralize">
+    <label>Username or Email:</label>
+    <input class="user1" type="text" name="login_identifier" required>
+    <br>
+    <label>Password:</label>
+    <br>
+    <input class="password" type="password" name="password" required>
+    <br>
+    <a class="reset" href="{% url 'password_reset' %}">Reset password?</a>
+        <input class="login" type="submit" value="Sign in">
+    </div>
+</form>
+</div>
+{% include "footer.html" %}
+
+</body>
+</html>

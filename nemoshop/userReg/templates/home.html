@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Home</title>
+
+
+    </head>
+
+    {% include "header.html" %}
+
+    <body>
+        <div class="content-wrapper">
+    <div class="content">
+        <h1>Welcome to our stationery store!</h1>
+        <p>Here you will find selection of pencils, pens, notebooks and much more</p>
+    </div>
+
+
+        </div>
+        <div class="prodtitle-container">
+        <div class="prodtitle">Our Products</div>
+            </div>
+
+
+            <div class="product-container">
+        <div class="product">
+        <a href="{% url 'pencils' %}"><img src="{% static 'img/pencils.jpg' %}"></a>
+        <p>Pencils</p>
+      </div>
+      <div class="product">
+          <a href="{% url 'pens' %}"><img src="{% static 'img/pens.jpg' %}"></a>
+        <p>Pens</p>
+      </div>
+      <div class="product">
+          <a href="{% url 'notepads' %}"><img src="{% static 'img/notebooks.jpg' %}"></a>
+        <p>Notepads</p>
+      </div>
+    <div class="product">
+        <a href="{% url 'copybooks' %}"><img src="{% static 'img/copybooks.jpg' %}"></a>
+        <p>Copybooks</p>
+      </div>
+      <div class="product">
+          <a href="{% url 'markers' %}"><img src="{% static 'img/markers.jpg' %}"></a>
+        <p>Markers</p>
+      </div>
+      <div class="product">
+          <a href="{% url 'pencil-cases' %}"><img src="{% static 'img/pencilcase.jpeg' %}"></a>
+        <p>Pencil cases</p>
+      </div>
+        <div class="product">
+            <a href="{% url 'rulers' %}"><img src="{% static 'img/rulers.jpg' %}"></a>
+        <p>Rulers</p>
+      </div>
+        <div class="product">
+            <a href="{% url 'backpacks' %}"><img src="{% static 'img/backpack.jpg' %}"></a>
+        <p>Backpacks</p>
+      </div>
+            </div>
+
+{% include "footer.html" %}
+
+    </body>
+</html>

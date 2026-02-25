@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/cabinet.css' %}?v=2">
+        <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cabinet</title>
+
+
+    </head>
+
+    {% include "header.html" %}
+
+    <body>
+            <h3>Welcome, {{ user.username }}</h3>
+
+
+ <form id="deliverySection">
+            <h2>fill this fields to automatically use them for delivery section</h2>
+             <p>Enter your name and surname:</p>
+            <input type="text" name="name" id="nameInput" required><br>
+
+            <p>Enter your city:</p>
+            <input type="text" name="city" id="cityInput" required><br>
+
+            <p>Enter address:</p>
+            <input type="text" name="address" id="addressInput" required><br>
+
+            <p>Eircode/Postcode:</p>
+            <input type="text" name="post-index" id="postIndexInput" required><br>
+
+            <button id="editButton" type="button">Edit</button>
+            <button id="saveButton" type="submit">Save</button>
+</form>
+
+
+
+
+    {% include "footer.html" %}
+
+
+    <script src="{% static 'js/cabinet.js' %}?v=2"></script>
+
+</body>
+</html>

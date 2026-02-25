@@ -1,0 +1,130 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.out {
+  margin: 285px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+  flex-direction: column;
+  border: 9px solid rgb(80, 200, 170);
+  width: 350px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+
+.out::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgb(200,200,200);
+  z-index: -1;
+}
+
+.out h2{
+    color: rgb(255, 60, 66);
+    margin-bottom: 30px;
+}
+
+.centralize{
+    margin-left: 42px;
+}
+
+.password{
+    margin-bottom: 10px;
+}
+
+.login{
+    cursor: pointer;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 7px;
+    transition: color 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
+}
+
+.login:hover{
+    color: rgb(255, 60, 66);
+    background-color: rgb(80, 200, 170);
+}
+
+.reset{
+    margin-right: 30px;
+    text-decoration: none;
+    color: rgb(255, 60, 66);
+}
+
+.reset:hover{
+    color: red;
+}
+
+
+.error{
+    margin: 0;
+    margin-bottom: 16px;
+    color: #e53935;
+}
+
+.user1{
+    width: 250px;
+}
+
+.password{
+    width: 250px;
+}
+
+@media screen and (max-width: 968px) {
+
+
+
+.out {
+  margin: 110px auto;
+  height: 298px;
+  width: 250px;
+  padding: 10px;
+}
+
+.user1{
+    width: 180px;
+}
+
+.password{
+    width: 180px;
+    margin-bottom: 30px;
+}
+
+.login{
+    font-size: 14px;
+    color: black;
+    border: 1px solid black;
+}
+
+.reset{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+
+.centralize{
+    margin-left: 22px;
+}
+
+.out h2{
+    font-size: 20px;
+    margin-top: 0px;
+}
+
+.error{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+}

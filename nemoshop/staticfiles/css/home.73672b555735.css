@@ -1,0 +1,110 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+    .content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150px;
+    }
+
+    .content {
+      position: relative;
+      height: 180px;
+      width: 100%;
+      background: url("/static/img/background.02f6aca12cf1.jpg") no-repeat center center;
+      background-size: cover;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transform: scale(0.9);
+      opacity: 1;
+      z-index: 99;
+    }
+
+    .content h1 {
+      margin-top: 32px;
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .content p {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      line-height: 1.5;
+    }
+
+    @keyframes showContent {
+      0% {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+   .product {
+      display: inline-block;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 155px;
+      height: 155px;
+      border-radius: 100px;
+      border: 1px solid gray;
+    }
+
+    .product p {
+      margin-top: 5px;
+      font-weight: bold;
+    }
+
+    .prodtitle {
+    color: rgb(255, 255, 195);
+    background-color: rgb(80, 200, 180);
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 80px;
+    border: 1px solid grey;
+    padding-right: 18px;
+    padding-left: 18px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    box-sizing: border-box;
+    border-radius: 25px;
+}
+
+.prodtitle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.product-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        height: 230px;
+    }
+
+    .product img {
+      width: 140px;
+      height: 140px;
+    }
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/search_results.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <title>About</title>
+</head>
+{% include "header.html" %}
+
+<body>
+<div class="out">
+    <h3>Search results:</h3>
+    {% if titles %}
+        {% for title in titles %}
+            <a href="/{{ title.title }}">{{ title.title }}</a>
+        {% endfor %}
+    {% else %}
+        {% if query %}
+            <p>No results found for '{{ query }}'</p>
+        {% else %}
+            <p>No results for empty query</p>
+        {% endif %}
+    {% endif %}
+</div>
+
+{% include "footer.html" %}
+
+</body>
+</html>

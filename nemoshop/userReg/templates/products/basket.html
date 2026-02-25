@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <title>Basket</title>
+    <link rel="stylesheet" href="{% static 'css/basket.css' %}?v=2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+
+{% include "header.html" %}
+
+<body>
+{% include "footer.html" %}
+
+                                    <div id="customAlertpay" class="customAlertpay" style="display: none;">
+                                        <p>Minimum amount to be paid<br> is 5$</p>
+                                        <button id="customAlertpayClose" style="cursor: pointer;">Close</button>
+                                    </div>
+
+
+<div id="productsContainer"></div><br>
+<form action="{% url 'payment' %}" method="post">
+    {% csrf_token %}
+    <input type="hidden" name="total_price" id="totalPriceInput">
+    <div id="customAlert" class="custom-alert" style="display: none;">
+
+
+         <div id="deliverySection">
+            <h3>Delivery</h3>
+            <p>Enter your city:</p>
+            <input type="text" name="address" id="cityInput" required><br>
+            <span id="cityError" class="error-message"></span>
+            <p>Enter address:</p>
+            <input type="text" name="address" id="addressInput" required><br>
+            <span id="addressError" class="error-message"></span>
+            <p>Eircode/Postcode:</p>
+            <input type="text" name="post-index" id="postIndexInput" required><br>
+            <span id="postIndexError" class="error-message"></span>
+             <span>(Use 4242424242424242 as card number,<br>to proceed payment in test mode,<br></span>
+             <span>the rest of the values can be arbitrary)</span><br>
+                 <button id="cancelButton" style="cursor: pointer;">Cancel</button>
+    <button id="customAlertClose" style="cursor: pointer;">Pay</button>
+        </div>
+
+
+</div>
+    <button id="payButton" type="submit">Delivery and Payment</button>
+</form>
+
+    <script src="{% static 'js/basket.js' %}"></script>
+
+</body>
+</html>
