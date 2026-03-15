@@ -25,7 +25,7 @@ products.forEach(function (product) {
 
     productsContainer.appendChild(productElement);
 
-    // збереження ціни для totalSum
+
     productTotalPrices[product.title] = totalPrice;
 });
 
