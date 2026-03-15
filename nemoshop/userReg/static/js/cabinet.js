@@ -69,12 +69,12 @@ var form = document.getElementById("deliverySection");
 
 form.addEventListener("submit", function(event) {
 
-    // якщо браузер валідацію не пройшов — він сам покаже помилку
+
     if (!form.checkValidity()) {
         return;
     }
 
-    event.preventDefault(); // щоб не перезавантажувати сторінку
+    event.preventDefault(); 
 
     var nameInput = document.getElementById("nameInput");
     var cityInput = document.getElementById("cityInput");
